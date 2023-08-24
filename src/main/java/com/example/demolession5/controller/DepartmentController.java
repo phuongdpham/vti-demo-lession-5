@@ -4,6 +4,7 @@ import com.example.demolession5.model.Address;
 import com.example.demolession5.model.Department;
 import com.example.demolession5.model.DepartmentUpdateReq;
 import com.example.demolession5.service.DepartmentService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -16,7 +17,7 @@ public class DepartmentController {
     // DepartmentService bean is injected by Spring
     DepartmentService service;
 
-    public DepartmentController(DepartmentService service) {
+    public DepartmentController(@Qualifier("departmentService") DepartmentService service) {
         this.service = service;
     }
 

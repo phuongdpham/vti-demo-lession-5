@@ -4,20 +4,20 @@ import com.example.demolession5.model.Address;
 import com.example.demolession5.model.Department;
 import com.example.demolession5.model.DepartmentUpdateReq;
 import com.example.demolession5.service.DepartmentService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Pageable;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
 @RestController
 @RequestMapping("api/v2/departments")
-public class DepartmentController {
+public class DepartmentControllerV2 { // camel case -> departmentControllerV2
     // DepartmentService bean is injected by Spring
     DepartmentService service;
 
-    public DepartmentController(DepartmentService service) {
+    public DepartmentControllerV2(@Qualifier("departmentService") DepartmentService service) {
         this.service = service;
     }
 

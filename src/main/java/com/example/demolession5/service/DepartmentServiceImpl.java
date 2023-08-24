@@ -3,12 +3,9 @@ package com.example.demolession5.service;
 import com.example.demolession5.model.Department;
 import com.example.demolession5.model.DepartmentUpdateReq;
 import com.example.demolession5.repository.DepartmentRepository;
-import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public class DepartmentServiceImpl implements DepartmentService {
     DepartmentRepository repository;
 

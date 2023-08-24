@@ -6,11 +6,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-/**
- * InmemDepartmentRepositoryImpl is a class that implements DepartmentRepository interface
- * and is annotated with @Repository annotation.
- */
-public class InmemDepartmentRepositoryImpl implements DepartmentRepository {
+public class InSomewhereDepartmentRepositoryImpl implements DepartmentRepository {
     ConcurrentMap<Integer, Department> departments = new ConcurrentHashMap<>();
     @Override
     public List<Department> getAll() {
