@@ -14,7 +14,7 @@ public class DepartmentControllerMultiple {
 
     @PostConstruct
     void init() {
-        System.out.println(services.size());
+        log.info("size of services: {}", services.size());
     }
 
     public DepartmentControllerMultiple(List<DepartmentService> services) {
